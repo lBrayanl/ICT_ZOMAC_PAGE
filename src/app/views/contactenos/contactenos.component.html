@@ -1,0 +1,66 @@
+<Nvar-root [title]="nombrevista" [texto]="textoInicio"></Nvar-root>
+<div class="card" style="padding: 20px; text-align: center;">
+    <div class="row">
+        <div class="column">
+          <div class="cards">
+            <div class="imgBx">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+            </div>
+            <div class="contentBx">
+              <h2>Ubicacion</h2>
+              <div class="size">
+                <p class="texto-card">Carrera 6 No. 16 - 35<br>Quirinal Neiva - Huila</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="cards">
+            <div class="imgBx">
+                <span class="material-symbols-outlined">
+                    contact_page
+                </span>
+            </div>
+            <div class="contentBx">
+              <h2>Contacto</h2>
+              <div class="size">
+                <p class="texto-card">servicioalcliente@clinicauros.com<br>(+57) 323 209 4234</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="cards">
+            <div class="imgBx">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+            </div>
+            <div class="contentBx">
+              <h2>Horarios</h2>
+              <div class="size">
+                <p class="texto-card">Lunes a Viernes: 7:00am a 6:00pm<br>Sabados y Domingos: ...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="formulario">
+      <h1>Ingresa Tus Datos</h1>
+      <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
+        <label for="nombre">Nombres y apellidos:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombres y apellidos" required ngModel> 
+  
+        <label for="email">Correo electronico:</label>
+        <input type="text" id="email" name="email" placeholder="Ingrese su correo electronico" required ngModel>
+  
+        <label for="mensaje">Informacion:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ingrese su informacion" required ngModel></textarea>
+  
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+</div>
+<Footer-root></Footer-root>

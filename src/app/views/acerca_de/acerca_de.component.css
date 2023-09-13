@@ -1,0 +1,202 @@
+.card{
+    height: 500px;
+    height: auto;
+    transition: all 0.5s;
+}
+.card-titulo{
+    font-size: calc(2.0em + 1vw);
+    font-weight: bold;
+    transition: 0.5s all;
+}
+.card-titulo:hover{
+    text-shadow: 0.1em 0.1em 0.2em rgb(8, 0, 77)
+}
+@keyframes mianim1 { 
+    from { top: 85px } /*Fotograma inicio*/
+    to { top: 105px }
+  }
+  @keyframes mianim2 { 
+    from { top: 150px } /*Fotograma inicio*/
+    to { top: 125px }
+  }
+.imagen-informacion{
+    margin: 10px auto;
+    width: 500px;
+    position: relative;
+    top: 0px;
+}
+.imagen-informacion .imagenPadre{
+    width: 409px;
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    right: 0px;
+    margin: auto;
+    animation: aparece 2s linear 2s 1 normal both;
+}
+.pic-ctn_2 {
+    position: relative;
+    height: 300px;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    animation: aparece 2s linear 2s 1 normal both;
+
+}
+.pic-ctn_2 > img {
+    position: absolute;
+    width: 70px;
+}
+.pic-ctn_2 .imagenHijo1{
+    top: 94px;
+    animation: mianim1 2.5s infinite alternate;
+    left: 144px;
+}
+
+.pic-ctn_2 .imagenHijo2{
+    top: 152px;
+    left: 209px;
+    animation: mianim2 2.5s infinite alternate;
+}
+.pic-ctn_2 .imagenHijo3{
+    top: 138px;
+    left: 281px;
+    animation: mianim3 1s infinite alternate;
+}
+.texto_parrafo{
+    margin: 15px 140px 15px;
+    font-size: calc(0.2em + 1vw);
+    transition: all 0.5s;
+}
+.img-grupo{
+    width: 60%;
+    margin: 10px auto;
+    border: 0px solid;
+    transition: all 0.5s;
+    border-radius: 1%;
+}
+.img-grupo:hover{
+    border: 10px solid;
+    transition: all 0.5s;
+    border-color: #202a38;
+    border-radius: 10%;
+}
+.col {
+    width: 25%;
+}
+.row {
+    margin: 0 auto;
+    padding: 0px 138px;;
+}
+.column {
+    float: left;
+    width: 245px;
+    padding: 7px;
+    margin: 0 auto;
+}
+a{
+    color: rgb(110, 110, 110);
+}
+a:hover{
+    color: #202a38;
+}
+.carousel{
+    margin: 10px auto;
+    width: 70%;
+    transition: all 0.5s;
+}
+.imagenes_carusel{
+    border-radius: 10%;
+    border: 10px solid;
+    transition: all 0.5s;
+}
+.imagenes_carusel:hover{
+    border-radius: 5%;
+    border: 5px solid;
+    transition: all 0.5s;
+}
+.card-estilos{
+    background-color: #ffffff;
+    filter: grayscale(100%);
+}
+.card-estilos:hover{
+    filter: grayscale(0%);
+    box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.5)
+}
+
+.card-estilos img{
+    height: 231px;
+}
+@media screen and (max-width: 993px){
+    .texto_parrafo{
+        margin: 14px 48px 15px;
+        transition: all 0.5s;
+    }
+    .carousel{
+        width: 80%;
+        transition: all 0.5s;
+    }
+    .texto_parrafo{
+        font-size: calc(0.8em + 1vw);
+    }
+}
+@media screen and (max-width: 688px){
+    .texto_parrafo{
+        margin: 14px 10px 15px;
+    }
+    .carousel{
+        width: 90%;
+        transition: all 0.5s;
+    }
+    .imagen-informacion{
+        width: 100%;
+    }
+    .pic-ctn_2{
+        height: 299px;
+        width: 275px;
+        margin: 0px auto;
+    }
+    .pic-ctn_2 .imagenHijo1{
+        left: 12%;
+    }
+    .pic-ctn_2 .imagenHijo2{
+        left: 37%;
+    }
+    .pic-ctn_2 .imagenHijo3{
+        left: 66%;
+    }
+    .row{
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 533px){
+    .column{
+        width: 173px;
+    }
+    .carousel{
+        width: 100%;
+        transition: all 0.5s;
+    }
+}
+@media screen and (max-width: 466px){
+    .imagen-informacion .imagenPadre{
+        height: 108%;
+        width: 100%;
+    }
+}
+.ventanas_equipo{
+    margin: 0px auto;
+}
+.ventana{
+    background-color: #202a38;
+    color: #ffffff;
+    margin: 10px;
+    height: 100%;
+    border-color:#ffffff;
+}
+.ventana:hover{
+    background-color: #394557;
+    margin: 10px;
+    height: 100%;
+    border-color: none !important;
+}

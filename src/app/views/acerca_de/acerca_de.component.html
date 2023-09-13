@@ -1,0 +1,131 @@
+<Nvar-root [title]="nombreVista" [texto]="textoInicio"></Nvar-root>
+<div class="card" style="padding: 20px; text-align: center;" [style]="focusImagen">
+  <div class="imagen-informacion">
+    <img src="../../../assets/image/diseno_web.png" class="imagenPadre">
+    <div class="pic-ctn_2">
+      <img src="../../../assets/image/diseno_1.png" alt="" class="imagenHijo1">
+      <img src="../../../assets/image/diseno_2.png" alt="" class="imagenHijo2">
+      <img src="../../../assets/image/diseno_img.png" alt="" class="imagenHijo3">
+    </div>
+  </div>
+    <h2 class="card-titulo">{{title}}</h2>
+    <p class="texto_parrafo">Nuestro enfoque esta en la creacion de soluciones informaticas que faciliten la vida de muchas personas.
+        Creemos que la tecnologia existe para que seamos mas felices y que su proposito principal es hacernos la
+        vida mas facil, por esta razon, toda nuestra experiencia y conocimiento en el desarrollo de soluciones 
+        informaticas multiplataforma estara a su disposicion con el fin de brindar productos finales de muy alta 
+        calidad, faciles de usar, visualmente atractivos e innovadores y que cumplan con las caracteristicas y 
+        requerimientos planteados por usted.</p>
+    <div class="carousel">
+      <ngb-carousel
+        #carousel
+        [interval]="4000"
+        [pauseOnHover]="pauseOnHover"
+        [pauseOnFocus]="pauseOnFocus"
+        (slide)="onSlide($event)"
+        [showNavigationArrows]="showNavigationArrows"
+	      [showNavigationIndicators]="showNavigationIndicators"
+        id="ngb-carousel"
+        (mouseover)="activarFocus(1)" 
+        (mouseout)="activarFocus(0)"
+      >
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+          <div class="carousel-caption">
+          </div>
+          <div class="picsum-img-wrapper">
+            <img [src]="img" class="imagenes_carusel" alt="My image {{i + 1}} description" width="100%"/>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <h2 class="card-titulo">{{title_2}}</h2>
+    <div class="ventanas_equipo">
+      <button
+        type="button"
+        class="btn btn-outline-primary ventana"
+        (click)="collapse_D.toggle();ocultar('D')"
+        [attr.aria-expanded]="!isCollapsed_D"
+        aria-controls="collapseExample"
+      >
+        Desarrolladores
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-primary ventana"
+        (click)="collapse_I.toggle();ocultar('I')"
+        [attr.aria-expanded]="!isCollapsed_I"
+        aria-controls="collapseExample"
+      >
+        Implementadores
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-primary ventana"
+        (click)="collapse_A.toggle();ocultar('A')"
+        [attr.aria-expanded]="!isCollapsed_A"
+        aria-controls="collapseExample"
+      >
+        Analistas 
+      </button>
+      
+      <!--<button
+        type="button"
+        class="btn btn-outline-primary ms-2"
+        (click)="isCollapsed = ! isCollapsed"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+      >
+        Toggle with Two Way Binding
+      </button>-->
+    </div>
+    <br><br>
+    <div #collapse_D="ngbCollapse" [(ngbCollapse)]="isCollapsed_D">
+      <div class="card">
+        <p class="texto_parrafo">Contamos con un equipo de expertos en diferentes areas tecnologicas que nos permiten crear soluciones informaticas de muy alta 
+            calidad y en un tiempo record.</p>
+        <div class="row row-cols-3 row-cols-md-5 g-5">
+          <div class="column" *ngFor="let persona of datos; index as i">
+            <div class="card card-estilos h-100">
+              <img [src]="persona.imagen" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{persona.nombre}}</h5>
+                <p class="card-text">{{persona.funcion}}</p>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <div #collapse_I="ngbCollapse" [(ngbCollapse)]="isCollapsed_I">
+      <div class="card">
+        <p class="texto_parrafo">Implementadores.</p>
+        <div class="row row-cols-3 row-cols-md-5 g-5">
+          <div class="column" *ngFor="let persona_i of datos_1; index as c">
+            <div class="card card-estilos h-100">
+              <img [src]="persona_i.imagen" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{persona_i.nombre}}</h5>
+                <p class="card-text">{{persona_i.funcion}}</p>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <div #collapse_A="ngbCollapse" [(ngbCollapse)]="isCollapsed_A">
+      <div class="card">
+        <p class="texto_parrafo">Analistas.</p>
+        <div class="row row-cols-3 row-cols-md-5 g-5">
+          <div class="column" *ngFor="let persona_i of datos_2; index as A">
+            <div class="card card-estilos h-100">
+              <img [src]="persona_i.imagen" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{persona_i.nombre}}</h5>
+                <p class="card-text">{{persona_i.funcion}}</p>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+</div>
+<Footer-root></Footer-root>

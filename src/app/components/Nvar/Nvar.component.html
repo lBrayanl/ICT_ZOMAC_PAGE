@@ -1,0 +1,39 @@
+
+<header ngClass="{{clase}}" [style]="dimensionPantalla">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/Inicio"><img class="logo_inicial" [src]="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="paginaSelect('0','/Inicio')" routerLink="/Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="paginaSelect('2','/Nosotros')" routerLink="/Nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="paginaSelect('3','/Servicios')" routerLink="/Servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="paginaSelect('1','/Contactenos')" routerLink="/Contactenos">Contactenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content-header">
+        <div class="text">
+            <h1 [className]="claseTitulo">{{title}}</h1>
+            <p class="card-text">{{texto}}</p>
+            <!--<a href="#" class="btn btn-primary">Mas informacion</a>-->
+        </div>
+    </div>
+    <div class="waves" [style]="ocultar">
+        <div class="wave circulo a"></div>
+        <div class="wave circulo b"></div>
+        <div class="wave circulo c"></div>
+    </div>
+</header>

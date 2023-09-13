@@ -1,0 +1,50 @@
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(32, 42, 56);
+    position: relative;
+    z-index: 1;
+}
+.card{
+    top: 180px;
+    margin: 0px auto;
+    width: 80%;
+    height: auto;
+}
+.card-header{
+    font-size: calc(0.5em + 1vw);
+    position: relative;
+    z-index: 20;
+    background-color: #8f949a;
+}
+.card-title{
+    font: 400 calc(5.0em + 1vw) Roboto, "Helvetica Neue", sans-serif;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+.card-text{
+    position: relative;
+    z-index: 10;
+    font-size: calc(0.5em + 1vw);
+}
+.rotoVidirio {
+    height: 70%;
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    z-index: 0;
+}
+.btn{
+    font-size: calc(0.5em + 1vw);
+    position: relative;
+    z-index: 30;
+    background-color: #202a38;
+    border-color: white;
+    transition: 0.5s all;
+}
+.btn:hover{
+    background-color: #3e4753;
+    transition: 0.5s all;
+}
